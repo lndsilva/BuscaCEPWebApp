@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    CEP retorno = new HttpService(txtCep.getText().toString()).execute().get();
+                    CEP retorno = new HttpService(txtCep.getText().toString().trim()).execute().get();
                     lblResposta.setText(retorno.toString());
                 } catch (ExecutionException e) {
                     e.printStackTrace();
